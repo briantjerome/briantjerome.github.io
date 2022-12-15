@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, ;
+}
+
+.banner {
+    height: 100vh;
+    width: 100%;
+    background-image: url(pixel-snow-art.gif);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -30px;
+    }
+
+.dropdown{
+    margin: 0 auto;
+}
+
+.navbar {
+    height: 60px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.6);
+    border-bottom: 1px solid #fff;
+}
+
+
+.navbar ul{
+    padding: 0;
+    margin: 0;
+    float: right;
+    margin-right: 60px;
+}
+
+.navbar ul li{
+    position: relative;
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar ul li a{
+    display: block;
+    padding: 0 15px;
+    color: white;
+    text-decoration: none;
+    line-height: 60px;
+    font-size: 20px;
+}
+
+.navbar ul li a:hover{
+    background: rgba(0,0,0,0.6);
+}
+
+.navbar ul ul{
+    position: absolute;
+    top: 60px;
+    display: none;
+}
+
+.navbar ul li:hover > ul{
+    display: block;
+    z-index: 30;
+    cursor: pointer;
+    background: rgba(0,0,0,0.6);
+}
+
+.navbar ul ul li{
+    width: 150px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+
+.navbar h1{
+    color: white;
+    cursor: default;
+}
+
+
+
+button{
+    width: 200px;
+    padding: 15px 0;
+    margin-top: 150px;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer; 
+    position: relative;
+    overflow: hidden;
+}
+
+.radio{
+    display: none;
+}
+
+.container{
+    position: relative;
+    max-width: 800px;
+    margin: 5% auto;
+}
+
+.slider{
+    width: 100%;
+    position: absolute;
+    padding-top: 56.25%;
+    background: #141414;    
+}
+
+.slider{
+    width: 100%;
+    position: absolute;
+    height: 0;
+    padding-top: 56.25%;
+    background: #141414;
+    overflow: hidden;
+    border: solid 1px #2e2e2e;
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+}
+
+.slide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    left: 0;
+    opacity: 0;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+    object-fit:inherit;
+}
+
+.caption{
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-color: rgba(0,0,0,0.75);
+   overflow: hidden;
+   width: 100%;
+   height: 0;
+   transition: .5s ease;
+   font-family: "damion";
+   color: yellow;
+   
+}
+
+.dots{
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+}
+
+.dots label{
+    width: 15px;
+    height: 15px;
+    background: red;
+    margin: 0 10px;
+    border-radius: 50%;
+    opacity: 10;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.dots label:hover{
+    opacity: 0.7;
+}
+
+#radio-1:checked ~ #slide-1,
+#radio-2:checked ~ #slide-2,
+#radio-3:checked ~ #slide-3,
+#radio-4:checked ~ #slide-4,
+#radio-5:checked ~ #slide-5,
+#radio-6:checked ~ #slide-6,
+#radio-7:checked ~ #slide-7{
+    opacity: 1;
+}
+
+.container:hover .caption{
+    height: 100%;
+
+}
+
+.caption h1{
+    font-size: 50;
+}
